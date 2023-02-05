@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Restaurant | CONTACT</title>
+
+    <!-- Google fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap"
+      rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
+      rel="stylesheet" />
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="assets/css/contact.css" />
+  </head>
+  <body>
+    <article>
+      <div class="wrapper">
+        <header class="header">
+          <div>
+            <img class="logo" src="assets/images/logo.png" alt="" />
+            <span class="logo-text">MyRestaurant</span>
+          </div>
+
+          <nav class="main-nav">
+            <ul class="main-nav-list">
+              <li><a class="main-nav-link" href="index.html">HOME</a></li>
+              <li><a class="main-nav-link" href="menu.html">OUR MENU</a></li>
+              <li><a class="main-nav-link" href="recipes.html">RECIPES</a></li>
+              <li>
+                <a class="main-nav-link" href="contact.html">CONTACT US</a>
+              </li>
+            </ul>
+          </nav>
+        </header>
+        <main class="main">
+          <div class="grid grid--2-cols grid--center-v container">
+            <div class="get-in-touch text-center">
+              <h2>Get In Touch</h2>
+              <form action="">
+                <fieldset>
+                  <legend>Your Details</legend>
+                  <div class="form-input">
+                    <label for="firstName">First Name:</label>
+                    <input
+                      type="text"
+                      id="firstName"
+                      name="firstName"
+                      required />
+                  </div>
+                  <div class="form-input">
+                    <label for="lastName">Last Name:</label>
+                    <input type="text" id="lastName" name="lastName" required />
+                  </div>
+                  <div class="form-input">
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" required />
+                  </div>
+                  <div class="form-input">
+                    <label for="message">Message:</label>
+                    <textarea
+                      id="message"
+                      name="message"
+                      rows="5"
+                      cols="23"
+                      required></textarea>
+                  </div>
+                </fieldset>
+
+                <button type="submit" value="submit" class="btn">Submit</button>
+              </form>
+            </div>
+            <div class="hours text-center">
+              <h2>Opening Hours</h2>
+              <div class="hours-flex">
+                <p>Mon Closed</p>
+                <p>Tue 16:00 - 23:00</p>
+                <p>Wed 16:00 - 23:00</p>
+                <p>Thu 16:00 - 23:00</p>
+                <p>Fri 14:00 - 23:00</p>
+                <p>Sat 12:00 - 23:00</p>
+                <p>Sun 12:00 - 23:00</p>
+              </div>
+            </div>
+          </div>
+        </main>
+        <footer class="footer text-center">
+          &copy;Copyright 2023. Created by <cite>Dimitrios Dimitriou</cite>
+        </footer>
+      </div>
+    </article>
+  </body>
+</html>

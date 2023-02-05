@@ -1,0 +1,163 @@
+/******************************/
+/* HOME PAGE STYLING          */
+/******************************/
+
+@import "general.css";
+
+/* -------------
+* SECTION HERO
+---------------*/
+.hero {
+  padding: 16rem 0;
+  background-color: #fdf2e9;
+}
+
+.hero img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+.hero-text {
+  text-align: justify;
+  font-size: 2rem;
+}
+
+.hero-text--header {
+  margin-bottom: 3.2rem;
+}
+
+.hero-text p {
+  margin-bottom: 3.2rem;
+}
+
+/* -------------
+* SECTION ABOUT
+---------------*/
+.about {
+  padding: 16rem 0;
+}
+
+.about img {
+  width: 100%;
+  border-radius: 1.2rem;
+}
+
+.about-text {
+  text-align: justify;
+  font-size: 2rem;
+}
+
+.about-text--header {
+  margin-bottom: 3.2rem;
+}
+
+.about-text p:not(:last-child) {
+  margin-bottom: 3.2rem;
+}
+
+/* -------------
+* SECTION INFO
+---------------*/
+.info {
+  padding: 12rem;
+  background-color: #fdf2e9;
+  background-image: url("../images/interior.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+.section-info-title {
+  font-size: 3.2rem;
+  margin-bottom: 6.4rem;
+  color: #cf711f;
+  background-color: #e6dbd2;
+  padding: 1.2rem;
+  margin: -15rem 0 12rem 0;
+  border-radius: 1.2rem;
+}
+
+.info-areas {
+  padding: 1.8rem;
+  background-color: #e6dbd2;
+}
+
+.info-areas ul {
+  list-style: none;
+  font-size: 1.6rem;
+  margin-top: 3.2rem;
+}
+
+.info-table {
+  padding: 1.8rem;
+  font-size: 1.6rem;
+  background-color: #f4dbc6;
+}
+
+.info-table table {
+  font-size: 1.6rem;
+  margin-top: 3.2rem;
+}
+
+.info-table th,
+.info-table td {
+  padding: 1.5rem;
+  text-align: start;
+}
+
+/* -------------
+* SECTION TESTIMONIALS
+---------------*/
+.reviews {
+  padding: 12rem 4rem;
+  font-size: 1.6rem;
+}
+
+.review {
+  min-height: 25rem;
+  border: 1px solid #777;
+  border-radius: 1.2rem;
+  padding: 1.2rem;
+}
+
+.review-name {
+  margin-bottom: 1.2rem;
+  font-weight: 700;
+}
+
+/* -------------
+* SECTION BOOK TABLE
+---------------*/
+#book-table {
+  font-size: 1.6rem;
+  padding: 16rem 0;
+  background-color: #fdf2e9;
+}
+
+.form-input {
+  max-width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-input input,
+.form-input label {
+  width: 20rem;
+  margin: 1rem;
+  padding: 1rem;
+}
+
+.form-radio {
+  max-width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-radio input,
+.form-radio label {
+  margin: 1rem;
+  padding: 1rem;
+}

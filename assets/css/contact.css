@@ -1,0 +1,47 @@
+@import "general.css";
+
+h2 {
+  font-size: 2.4rem;
+  margin-bottom: 3.6rem;
+}
+
+.main {
+  font-size: 1.8rem;
+}
+.get-in-touch {
+  margin-top: 8.4rem;
+  padding: 8.4rem 4.2rem;
+  background-color: #fdf2e9;
+}
+
+.hours {
+  margin: 8.4rem auto;
+  line-height: 2;
+  color: #cf711f;
+}
+
+.hours-flex {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+}
+
+/* GET IN TOUCH FORM */
+.form-input {
+  margin: 2rem;
+  max-width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-input input,
+.form-input label {
+  width: 20rem;
+  padding: 1rem;
+}
+
+.form-input label {
+  text-align: left;
+}

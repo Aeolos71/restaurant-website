@@ -1,0 +1,106 @@
+/******************************/
+/* MENU PAGE STYLING          */
+/******************************/
+
+@import "general.css";
+
+/* RECIPES ARTICLE */
+.recipes {
+  padding: 6.4rem 0;
+}
+
+/* COUNTS */
+.count {
+  /* padding: 1.2rem; */
+  border: solid 1px #333;
+  background-color: #cf711f;
+  color: #fff;
+}
+
+.count p {
+  font-size: 2.6rem;
+  margin: 3.2rem 0;
+}
+
+#download-number,
+#likes-number {
+  margin-left: 1.2rem;
+  color: #6beecf;
+}
+
+/* RECIPES LIST */
+.recipes-list {
+  padding: 1.2rem;
+  background-color: #fdf2e9;
+}
+
+.recipes-list-item {
+  margin: 6.4rem 0;
+  border-bottom: solid 1px #777;
+}
+
+.recipes-list-item a:hover {
+  cursor: pointer;
+  color: brown;
+}
+
+.recipes-list-item--title {
+  font-size: 3rem;
+  /* color: black; */
+}
+
+.recipes-list-item--description {
+  font-size: 1.3rem;
+  margin: 1.6rem 0;
+}
+
+/* RECIPE DETAILS */
+.recipe-details {
+  margin: 6.4rem 0;
+  padding: 3.2rem;
+  border: solid 1px #cf711f;
+}
+.recipe-details-box {
+  margin: 6.4rem 0;
+}
+
+#recipe-title {
+  font-size: 3.6rem;
+  margin: 3.2rem 0;
+}
+
+.recipe-details-box--header,
+.recipe-method-step {
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  margin: 2.4rem 0;
+}
+
+#recipe-ingredients li,
+#recipe-method li {
+  font-size: 1.4rem;
+}
+
+#recipe-ingredients li {
+  border-bottom: solid 1px #555;
+}
+
+/* LEAVE A COMMENT FORM */
+.form-input {
+  margin: 2rem;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  //align-items: center;
+  justify-content: center;
+}
+
+.form-input input,
+.form-input label {
+  width: 20rem;
+  padding: 1rem;
+}
+
+.form-input label {
+  font-size: 1.6rem;
+}

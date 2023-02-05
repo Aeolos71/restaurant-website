@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Restaurant | MENU</title>
+
+    <!-- Google fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap"
+      rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
+      rel="stylesheet" />
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="assets/css/recipes.css" />
+  </head>
+  <body onload="isFirstTime()">
+    <header class="header">
+      <div>
+        <img class="logo" src="assets/images/logo.png" alt="" />
+        <span class="logo-text">MyRestaurant</span>
+      </div>
+
+      <nav class="main-nav">
+        <ul class="main-nav-list">
+          <li><a class="main-nav-link" href="index.html">HOME</a></li>
+          <li><a class="main-nav-link" href="menu.html">OUR MENU</a></li>
+          <li><a class="main-nav-link" href="recipes.html">RECIPES</a></li>
+          <li>
+            <a class="main-nav-link" href="contact.html">CONTACT US</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Recipes-list -->
+      <article class="container recipes">
+        <h2 class="section-title text-center">Our Recipes</h2>
+        <div class="grid grid--2-cols text-center count">
+          <p>Downloads: <span id="download-number"></span></p>
+          <p>Likes: <span id="likes-number"></span></p>
+        </div>
+        <section class="recipes-list" id="recipes-list"></section>
+        <section class="recipe-details hidden" id="recipe-details">
+          <div class="grid grid--3-cols">
+            <button class="btn-sm" id="back-to-recipes" onclick="hideRecipe()">
+              Back To Recipes
+            </button>
+            <button class="btn-sm" id="like-recipe" onclick="likeRecipe()">
+              Like Recipe
+            </button>
+            <button
+              class="btn-sm"
+              id="download-recipe"
+              onclick="downloadRecipe()">
+              Download Recipe
+            </button>
+          </div>
+          <p id="recipe-title" class="text-center"></p>
+          <div class="grid grid--2-cols recipe-details-box">
+            <div class="recipe-details-box--ingredients">
+              <h2 class="recipe-details-box--header">ingredients</h2>
+              <ul id="recipe-ingredients"></ul>
+            </div>
+            <div class="recipe-details-box--ingredients">
+              <h2 class="recipe-details-box--header">Method</h2>
+              <ul id="recipe-method"></ul>
+            </div>
+          </div>
+          <div class="text-center">
+            <form>
+              <div class="form-input">
+                <label for="message">Leave a comment:</label>
+                <textarea
+                  id="comment"
+                  name="comment"
+                  rows="5"
+                  required></textarea>
+              </div>
+              <button type="submit" value="submit" class="btn-sm">
+                Submit
+              </button>
+            </form>
+          </div>
+        </section>
+      </article>
+    </main>
+    <footer class="footer text-center">
+      &copy;Copyright 2023. Created by <cite>Dimitrios Dimitriou</cite>
+    </footer>
+
+    <script type="text/javascript" src="./assets/js/recipes.js"></script>
+  </body>
+</html>

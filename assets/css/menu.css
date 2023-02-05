@@ -1,0 +1,41 @@
+/******************************/
+/* MENU PAGE STYLING          */
+/******************************/
+
+@import "general.css";
+
+/* -------------
+* MENU GENERAL
+---------------*/
+.menu {
+  margin: 6.4rem 0 0 0;
+}
+.menu img {
+  width: 100%;
+  border-radius: 1.2rem;
+}
+
+.menu-items {
+  width: 100%;
+  height: 100%;
+  margin-left: auto;
+  font-size: 1.6rem;
+}
+
+.menu-items table {
+  font-size: 1.6rem;
+}
+
+.menu-items th,
+.menu-items td {
+  padding: 1rem;
+  text-align: start;
+}
+
+/* ----------------
+* SECTION MAIN MENU
+-------------------*/
+.main-menu {
+  background-color: #fdf2e9;
+  padding: 6.4rem 0;
+}
