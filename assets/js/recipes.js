@@ -1,3 +1,6 @@
+// Import the JSON file
+import myRecipes from "./recipes.json" assert { type: "json" };
+
 /******************************************************
  * HTML ELEMENTS
  *******************************************************/
@@ -36,6 +39,9 @@ let downloads = 0; // Init the downloads
 let likes = 0;
 let sessionRecipes = []; // Init the downloaded recipes
 
+// Event listener when the page load/reload to get the right session storage values
+document.addEventListener("DOMContentLoaded", isFirstTime);
+
 function isFirstTime() {
   if (sessionStorage.getItem("hasBeenLoaded") === null) {
     sessionStorage.setItem("downloads", Number(downloads));
@@ -55,53 +61,59 @@ function isFirstTime() {
 /******************************************************
  * GET THE DATA FROM THE FILE
  *******************************************************/
-async function getRecipes() {
-  const response = await fetch("./assets/js/recipes.json");
-  return response.json();
-}
+// async function getRecipes() {
+//   const response = await fetch("./assets/js/recipes.json");
+//   return response.json();
+// }
 
 /******************************************************
  * DISPLAY THE RECIPES LIST ON THE PAGE
  *******************************************************/
-async function recipesList() {
-  // Fetch the data from the JSON file
-  const recipes = await getRecipes();
-
-  for (let i = 0; i < recipes.length; i++) {
+function recipesList() {
+  // Loop over myRecipes object
+  for (let i = 0; i < myRecipes.length; i++) {
+    // Create a <p> element for each item
     let p = document.createElement("p");
+    // Add a class name to each p element
     p.className = "recipes-list-item";
-    p.innerHTML = `<a class="recipes-list-item--title" onclick="displayRecipe(${recipes[i].id})">
-        ${recipes[i].title}
+    // Display the recipe details
+    p.innerHTML = `
+      <a class="recipes-list-item--title">
+        ${myRecipes[i].title}
       </a>
       <p class="recipes-list-item--description">
-        ${recipes[i].description}
+        ${myRecipes[i].description}
       </p>`;
+    // Add the p element to the list
     recipesListEl.appendChild(p);
+
+    // Event listener for each p element. We get the event innerText which is the recipe title
+    // and pass it as an argument to the displayRecipe function to display the details of the recipe
+    p.addEventListener("click", (e) => {
+      displayRecipe(e.target.innerText);
+    });
   }
 }
-
+// Display the recipes list on the page
 recipesList();
 
 /******************************************************
  * DISPLAY RECIPE DETAILS
  *******************************************************/
-async function displayRecipe(id) {
+function displayRecipe(title) {
   recipesListEl.classList.toggle("hidden"); // add class hidden to the recipes list section
   recipeDetailsEl.classList.toggle("hidden"); // remove class hidden from the recipe details section
 
-  // get the recipes array
-  const recipes = await getRecipes();
-
   // loop over the array
-  for (let i = 0; i < recipes.length; i++) {
+  for (let i = 0; i < myRecipes.length; i++) {
     // Check if the recipe has the same id
-    if (recipes[i].id === id) {
+    if (myRecipes[i].title === title) {
       // Display the title of the recipe
-      recipeTitleEl.innerHTML = recipes[i].title;
+      recipeTitleEl.innerHTML = myRecipes[i].title;
 
       // Display the ingredients of the recipe
       // loop over the ingredients array to create the list of ingredients
-      recipes[i].ingredients.forEach((element) => {
+      myRecipes[i].ingredients.forEach((element) => {
         let li = document.createElement("li");
         li.innerHTML = element;
         recipeIngredientsEl.appendChild(li);
@@ -109,7 +121,7 @@ async function displayRecipe(id) {
 
       // Display the method steps of the recipe
       // loop over the methods array to create the list of method steps
-      recipes[i].method.forEach((element, index) => {
+      myRecipes[i].method.forEach((element, index) => {
         let li = document.createElement("li");
         li.innerHTML = `
         <p class="recipe-method-step">Step ${index + 1}</p> 
@@ -130,6 +142,10 @@ function hideRecipe() {
   recipeIngredientsEl.innerHTML = "";
   recipeMethodEl.innerHTML = "";
 }
+// Event listener for the "Back To Recipes" button
+document
+  .getElementById("back-to-recipes")
+  .addEventListener("click", hideRecipe);
 
 /******************************************************
  * DOWNLOAD RECIPE FUNCTION
@@ -139,6 +155,10 @@ function downloadRecipe() {
   downloadNumberEl.innerHTML = downloads;
   sessionStorage.setItem("downloads", Number(downloads));
 }
+// Event listener for the "Download Recipe" button
+document
+  .getElementById("download-recipe")
+  .addEventListener("click", downloadRecipe);
 
 /******************************************************
  * LIKE RECIPE FUNCTION
@@ -148,3 +168,5 @@ function likeRecipe() {
   likesNumberEl.innerHTML = likes;
   sessionStorage.setItem("likes", Number(likes));
 }
+// Event listener for the "Like REcipe" button
+document.getElementById("like-recipe").addEventListener("click", likeRecipe);

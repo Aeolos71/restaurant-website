@@ -17,7 +17,8 @@
     <!-- Main CSS -->
     <link rel="stylesheet" href="assets/css/recipes.css" />
   </head>
-  <body onload="isFirstTime()">
+  <!-- <body onload="isFirstTime()"> -->
+  <body>
     <header class="header">
       <div>
         <img class="logo" src="assets/images/logo.png" alt="" />
@@ -47,18 +48,9 @@
         <section class="recipes-list" id="recipes-list"></section>
         <section class="recipe-details hidden" id="recipe-details">
           <div class="grid grid--3-cols">
-            <button class="btn-sm" id="back-to-recipes" onclick="hideRecipe()">
-              Back To Recipes
-            </button>
-            <button class="btn-sm" id="like-recipe" onclick="likeRecipe()">
-              Like Recipe
-            </button>
-            <button
-              class="btn-sm"
-              id="download-recipe"
-              onclick="downloadRecipe()">
-              Download Recipe
-            </button>
+            <button class="btn-sm" id="back-to-recipes">Back To Recipes</button>
+            <button class="btn-sm" id="like-recipe">Like Recipe</button>
+            <button class="btn-sm" id="download-recipe">Download Recipe</button>
           </div>
           <p id="recipe-title" class="text-center"></p>
           <div class="grid grid--2-cols recipe-details-box">
@@ -93,6 +85,6 @@
       &copy;Copyright 2023. Created by <cite>Dimitrios Dimitriou</cite>
     </footer>
 
-    <script type="text/javascript" src="./assets/js/recipes.js"></script>
+    <script type="module" src="./assets/js/recipes.js"></script>
   </body>
 </html>
