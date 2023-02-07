@@ -58,13 +58,6 @@ function isFirstTime() {
     likesNumberEl.innerHTML = likes;
   }
 }
-/******************************************************
- * GET THE DATA FROM THE FILE
- *******************************************************/
-// async function getRecipes() {
-//   const response = await fetch("./assets/js/recipes.json");
-//   return response.json();
-// }
 
 /******************************************************
  * DISPLAY THE RECIPES LIST ON THE PAGE
