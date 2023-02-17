@@ -68,6 +68,8 @@ Also you can comment, like or even download the recipe to your local machine sto
 
 aeolos.developers@gmail.com
 
-Project Link: https://github.com/Aeolos71/restaurant-website
+Project Files Link: https://github.com/Aeolos71/restaurant-website
+
+Project Online: https://aeolos71.github.io/restaurant-website/
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
