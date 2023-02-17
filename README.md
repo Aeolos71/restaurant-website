@@ -2,7 +2,7 @@
 <h3 align="center">Restaurant Website</h3>
 
 <p align="center">
-  A project I work for the Web Dev bootcamp at HyperionDev
+  A project I work for learning purpose
 </p>
 
 
@@ -23,7 +23,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-This is a capstone task for task 42. First we asked to create a plain HTML and CSS website back to the task 29 capstone. Now we have added functionality by adding Javascript.
+A project I work for learning purpose. I will keep updating the project as i am learning new skills.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
